@@ -1,0 +1,25 @@
+---
+title: "29-07-2024"
+author: ""
+date: ""
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lat=33.7395, lng=73.0554, popup="Daman-e-Koh, Islamabad") %>%
+  addMarkers(lat=33.7299, lng=73.0384, popup="Faisal Masjid, Islamabad") #%>%
+ # %addMarkers(lat=33.6833, lng=73.0666, popup="LoK Virsa Museum, Islamabad") #%>%
+  #setView (lat=28.6129, lng=77.2295, zoom=16) 
+  
+m  # Print the map
+```
